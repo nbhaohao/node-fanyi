@@ -9,7 +9,7 @@ const handleError = (errorString: string): void => {
   process.exit(2);
 };
 
-const translate = async (word: string): Promise<any> => {
+const translate = async (word: string): Promise<{ success: boolean }> => {
   const isEnglishWord = isEnglish(word);
   const [errorString, result] = await requestBaiDuTranslate(word, {
     from: isEnglishWord ? BaiDuLanguageEnum.EN : BaiDuLanguageEnum.ZH,
@@ -17,7 +17,7 @@ const translate = async (word: string): Promise<any> => {
   });
   if (errorString) {
     handleError(errorString);
-    return;
+    return { success: false };
   }
   const eyesEmoji = nodeEmoji.get("eyes");
   console.log(chalk.yellow(`${eyesEmoji} 输入：${word}`));
@@ -27,6 +27,7 @@ const translate = async (word: string): Promise<any> => {
       chalk.green(`${tadaEmoji} 结果：${result.trans_result[0].dst}`)
     );
   }
+  return { success: true };
 };
 
 export { translate };
