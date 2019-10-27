@@ -31,4 +31,4 @@ fy hello world
 
 ## 使用截图
 
-![use demo]("https://github.com/nbhaohao/node-fanyi/tree/master/demo/node-fanyi-demo.gif")
+![demo](https://github.com/nbhaohao/node-fanyi/raw/master/demo/node-fanyi-demo.gif)
