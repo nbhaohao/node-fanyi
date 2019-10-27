@@ -3,6 +3,12 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
+  "bin": {
+    "fy": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "ts-node-dev src/main.ts",
     "build": "tsc"
