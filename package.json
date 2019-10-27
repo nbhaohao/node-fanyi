@@ -1,8 +1,11 @@
 {
   "name": "node-fanyi",
-  "version": "0.0.1",
-  "main": "index.js",
+  "version": "0.0.2",
+  "main": "dist/main.js",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/nbhaohao/node-fanyi"
+  },
   "bin": {
     "fy": "dist/cli.js"
   },
