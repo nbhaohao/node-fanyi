@@ -1,4 +1,4 @@
 node_modules/
 .idea/
-/src/private.ts
 dist/
+/src/constants/private.ts
